@@ -1,0 +1,8 @@
+platform:ios ,'6.0'
+pod 'UIColor-Utilities', '~> 1'
+pod 'GoogleAnalytics-iOS-SDK', '~> 3'
+pod 'ReactiveCocoa','~> 2'
+pod 'libextobjc', '~> 0.4'
+pod 'HockeySDK', '~>3'
+pod 'CargoBay', '~>2'
+pod 'RMStore', '~>0.4'

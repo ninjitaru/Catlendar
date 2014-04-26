@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96DA5F3F190B8917009BFB12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F3E190B8917009BFB12 /* Foundation.framework */; };
+		96DA5F41190B8917009BFB12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F40190B8917009BFB12 /* CoreGraphics.framework */; };
+		96DA5F43190B8917009BFB12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F42190B8917009BFB12 /* UIKit.framework */; };
+		96DA5F49190B8917009BFB12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96DA5F47190B8917009BFB12 /* InfoPlist.strings */; };
+		96DA5F4B190B8917009BFB12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F4A190B8917009BFB12 /* main.m */; };
+		96DA5F4F190B8917009BFB12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F4E190B8917009BFB12 /* AppDelegate.m */; };
+		96DA5F5A190B8917009BFB12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DA5F59190B8917009BFB12 /* Images.xcassets */; };
+		96DA5F61190B8917009BFB12 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F60190B8917009BFB12 /* XCTest.framework */; };
+		96DA5F62190B8917009BFB12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F3E190B8917009BFB12 /* Foundation.framework */; };
+		96DA5F63190B8917009BFB12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F42190B8917009BFB12 /* UIKit.framework */; };
+		96DA5F6B190B8917009BFB12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96DA5F69190B8917009BFB12 /* InfoPlist.strings */; };
+		96DA5F6D190B8917009BFB12 /* CatlendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F6C190B8917009BFB12 /* CatlendarTests.m */; };
+		96DA5F78190B8A85009BFB12 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F77190B8A85009BFB12 /* CalendarViewController.m */; };
+		96DA5F7B190B8A91009BFB12 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F7A190B8A91009BFB12 /* AddEventViewController.m */; };
+		96DA5F91190B8B0A009BFB12 /* UIViewController+MonnyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F7E190B8B0A009BFB12 /* UIViewController+MonnyExtension.m */; };
+		96DA5F92190B8B0A009BFB12 /* UIColor+MonnyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F80190B8B0A009BFB12 /* UIColor+MonnyColor.m */; };
+		96DA5F93190B8B0A009BFB12 /* NSDate+MonnyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F82190B8B0A009BFB12 /* NSDate+MonnyExtension.m */; };
+		96DA5F94190B8B0A009BFB12 /* UIFont+MonnyFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F84190B8B0A009BFB12 /* UIFont+MonnyFont.m */; };
+		96DA5F95190B8B0A009BFB12 /* UIImage+MonnyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F86190B8B0A009BFB12 /* UIImage+MonnyImage.m */; };
+		96DA5F98190B8B0A009BFB12 /* UIView+MonnyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F8C190B8B0A009BFB12 /* UIView+MonnyExtension.m */; };
+		96DA5F99190B8B0A009BFB12 /* GAI+MonnyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F8E190B8B0A009BFB12 /* GAI+MonnyExtension.m */; };
+		96DA5F9A190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA5F90190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.m */; };
+		AA536713C9564232B148D3B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98A876D72754B9082ADB6EF /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96DA5F64190B8917009BFB12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96DA5F33190B8917009BFB12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96DA5F3A190B8917009BFB12;
+			remoteInfo = Catlendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96DA5F3B190B8917009BFB12 /* Catlendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catlendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96DA5F3E190B8917009BFB12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96DA5F40190B8917009BFB12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96DA5F42190B8917009BFB12 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96DA5F46190B8917009BFB12 /* Catlendar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Catlendar-Info.plist"; sourceTree = "<group>"; };
+		96DA5F48190B8917009BFB12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96DA5F4A190B8917009BFB12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96DA5F4C190B8917009BFB12 /* Catlendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Catlendar-Prefix.pch"; sourceTree = "<group>"; };
+		96DA5F4D190B8917009BFB12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96DA5F4E190B8917009BFB12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96DA5F59190B8917009BFB12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		96DA5F5F190B8917009BFB12 /* CatlendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatlendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96DA5F60190B8917009BFB12 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		96DA5F68190B8917009BFB12 /* CatlendarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CatlendarTests-Info.plist"; sourceTree = "<group>"; };
+		96DA5F6A190B8917009BFB12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96DA5F6C190B8917009BFB12 /* CatlendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatlendarTests.m; sourceTree = "<group>"; };
+		96DA5F76190B8A85009BFB12 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		96DA5F77190B8A85009BFB12 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		96DA5F79190B8A91009BFB12 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		96DA5F7A190B8A91009BFB12 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
+		96DA5F7D190B8B0A009BFB12 /* UIViewController+MonnyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MonnyExtension.h"; sourceTree = "<group>"; };
+		96DA5F7E190B8B0A009BFB12 /* UIViewController+MonnyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MonnyExtension.m"; sourceTree = "<group>"; };
+		96DA5F7F190B8B0A009BFB12 /* UIColor+MonnyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MonnyColor.h"; sourceTree = "<group>"; };
+		96DA5F80190B8B0A009BFB12 /* UIColor+MonnyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MonnyColor.m"; sourceTree = "<group>"; };
+		96DA5F81190B8B0A009BFB12 /* NSDate+MonnyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MonnyExtension.h"; sourceTree = "<group>"; };
+		96DA5F82190B8B0A009BFB12 /* NSDate+MonnyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MonnyExtension.m"; sourceTree = "<group>"; };
+		96DA5F83190B8B0A009BFB12 /* UIFont+MonnyFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MonnyFont.h"; sourceTree = "<group>"; };
+		96DA5F84190B8B0A009BFB12 /* UIFont+MonnyFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MonnyFont.m"; sourceTree = "<group>"; };
+		96DA5F85190B8B0A009BFB12 /* UIImage+MonnyImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MonnyImage.h"; sourceTree = "<group>"; };
+		96DA5F86190B8B0A009BFB12 /* UIImage+MonnyImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MonnyImage.m"; sourceTree = "<group>"; };
+		96DA5F8B190B8B0A009BFB12 /* UIView+MonnyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MonnyExtension.h"; sourceTree = "<group>"; };
+		96DA5F8C190B8B0A009BFB12 /* UIView+MonnyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MonnyExtension.m"; sourceTree = "<group>"; };
+		96DA5F8D190B8B0A009BFB12 /* GAI+MonnyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GAI+MonnyExtension.h"; sourceTree = "<group>"; };
+		96DA5F8E190B8B0A009BFB12 /* GAI+MonnyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GAI+MonnyExtension.m"; sourceTree = "<group>"; };
+		96DA5F8F190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLComposeViewController+MonnyExtension.h"; sourceTree = "<group>"; };
+		96DA5F90190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLComposeViewController+MonnyExtension.m"; sourceTree = "<group>"; };
+		A17430D543634CCFB638B395 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F98A876D72754B9082ADB6EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96DA5F38190B8917009BFB12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DA5F41190B8917009BFB12 /* CoreGraphics.framework in Frameworks */,
+				96DA5F43190B8917009BFB12 /* UIKit.framework in Frameworks */,
+				96DA5F3F190B8917009BFB12 /* Foundation.framework in Frameworks */,
+				AA536713C9564232B148D3B7 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96DA5F5C190B8917009BFB12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DA5F61190B8917009BFB12 /* XCTest.framework in Frameworks */,
+				96DA5F63190B8917009BFB12 /* UIKit.framework in Frameworks */,
+				96DA5F62190B8917009BFB12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96DA5F32190B8917009BFB12 = {
+			isa = PBXGroup;
+			children = (
+				96DA5F44190B8917009BFB12 /* Catlendar */,
+				96DA5F66190B8917009BFB12 /* CatlendarTests */,
+				96DA5F3D190B8917009BFB12 /* Frameworks */,
+				96DA5F3C190B8917009BFB12 /* Products */,
+				A17430D543634CCFB638B395 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		96DA5F3C190B8917009BFB12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F3B190B8917009BFB12 /* Catlendar.app */,
+				96DA5F5F190B8917009BFB12 /* CatlendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96DA5F3D190B8917009BFB12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F3E190B8917009BFB12 /* Foundation.framework */,
+				96DA5F40190B8917009BFB12 /* CoreGraphics.framework */,
+				96DA5F42190B8917009BFB12 /* UIKit.framework */,
+				96DA5F60190B8917009BFB12 /* XCTest.framework */,
+				F98A876D72754B9082ADB6EF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96DA5F44190B8917009BFB12 /* Catlendar */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F9B190B8B1C009BFB12 /* Controller */,
+				96DA5F7C190B8AA1009BFB12 /* Support */,
+				96DA5F4D190B8917009BFB12 /* AppDelegate.h */,
+				96DA5F4E190B8917009BFB12 /* AppDelegate.m */,
+				96DA5F59190B8917009BFB12 /* Images.xcassets */,
+				96DA5F45190B8917009BFB12 /* Supporting Files */,
+			);
+			path = Catlendar;
+			sourceTree = "<group>";
+		};
+		96DA5F45190B8917009BFB12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F46190B8917009BFB12 /* Catlendar-Info.plist */,
+				96DA5F47190B8917009BFB12 /* InfoPlist.strings */,
+				96DA5F4A190B8917009BFB12 /* main.m */,
+				96DA5F4C190B8917009BFB12 /* Catlendar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96DA5F66190B8917009BFB12 /* CatlendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F6C190B8917009BFB12 /* CatlendarTests.m */,
+				96DA5F67190B8917009BFB12 /* Supporting Files */,
+			);
+			path = CatlendarTests;
+			sourceTree = "<group>";
+		};
+		96DA5F67190B8917009BFB12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F68190B8917009BFB12 /* CatlendarTests-Info.plist */,
+				96DA5F69190B8917009BFB12 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96DA5F7C190B8AA1009BFB12 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F7D190B8B0A009BFB12 /* UIViewController+MonnyExtension.h */,
+				96DA5F7E190B8B0A009BFB12 /* UIViewController+MonnyExtension.m */,
+				96DA5F7F190B8B0A009BFB12 /* UIColor+MonnyColor.h */,
+				96DA5F80190B8B0A009BFB12 /* UIColor+MonnyColor.m */,
+				96DA5F81190B8B0A009BFB12 /* NSDate+MonnyExtension.h */,
+				96DA5F82190B8B0A009BFB12 /* NSDate+MonnyExtension.m */,
+				96DA5F83190B8B0A009BFB12 /* UIFont+MonnyFont.h */,
+				96DA5F84190B8B0A009BFB12 /* UIFont+MonnyFont.m */,
+				96DA5F85190B8B0A009BFB12 /* UIImage+MonnyImage.h */,
+				96DA5F86190B8B0A009BFB12 /* UIImage+MonnyImage.m */,
+				96DA5F8B190B8B0A009BFB12 /* UIView+MonnyExtension.h */,
+				96DA5F8C190B8B0A009BFB12 /* UIView+MonnyExtension.m */,
+				96DA5F8D190B8B0A009BFB12 /* GAI+MonnyExtension.h */,
+				96DA5F8E190B8B0A009BFB12 /* GAI+MonnyExtension.m */,
+				96DA5F8F190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.h */,
+				96DA5F90190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		96DA5F9B190B8B1C009BFB12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				96DA5F76190B8A85009BFB12 /* CalendarViewController.h */,
+				96DA5F77190B8A85009BFB12 /* CalendarViewController.m */,
+				96DA5F79190B8A91009BFB12 /* AddEventViewController.h */,
+				96DA5F7A190B8A91009BFB12 /* AddEventViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96DA5F3A190B8917009BFB12 /* Catlendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96DA5F70190B8917009BFB12 /* Build configuration list for PBXNativeTarget "Catlendar" */;
+			buildPhases = (
+				0AAF6D4107CC461D84475534 /* Check Pods Manifest.lock */,
+				96DA5F37190B8917009BFB12 /* Sources */,
+				96DA5F38190B8917009BFB12 /* Frameworks */,
+				96DA5F39190B8917009BFB12 /* Resources */,
+				9362803BE34D44CEAD7A7B90 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Catlendar;
+			productName = Catlendar;
+			productReference = 96DA5F3B190B8917009BFB12 /* Catlendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96DA5F5E190B8917009BFB12 /* CatlendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96DA5F73190B8917009BFB12 /* Build configuration list for PBXNativeTarget "CatlendarTests" */;
+			buildPhases = (
+				96DA5F5B190B8917009BFB12 /* Sources */,
+				96DA5F5C190B8917009BFB12 /* Frameworks */,
+				96DA5F5D190B8917009BFB12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96DA5F65190B8917009BFB12 /* PBXTargetDependency */,
+			);
+			name = CatlendarTests;
+			productName = CatlendarTests;
+			productReference = 96DA5F5F190B8917009BFB12 /* CatlendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96DA5F33190B8917009BFB12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Greamer;
+				TargetAttributes = {
+					96DA5F3A190B8917009BFB12 = {
+						DevelopmentTeam = QBK26ZL5JM;
+					};
+					96DA5F5E190B8917009BFB12 = {
+						TestTargetID = 96DA5F3A190B8917009BFB12;
+					};
+				};
+			};
+			buildConfigurationList = 96DA5F36190B8917009BFB12 /* Build configuration list for PBXProject "Catlendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96DA5F32190B8917009BFB12;
+			productRefGroup = 96DA5F3C190B8917009BFB12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96DA5F3A190B8917009BFB12 /* Catlendar */,
+				96DA5F5E190B8917009BFB12 /* CatlendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96DA5F39190B8917009BFB12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DA5F5A190B8917009BFB12 /* Images.xcassets in Resources */,
+				96DA5F49190B8917009BFB12 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96DA5F5D190B8917009BFB12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DA5F6B190B8917009BFB12 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AAF6D4107CC461D84475534 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9362803BE34D44CEAD7A7B90 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96DA5F37190B8917009BFB12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DA5F9A190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.m in Sources */,
+				96DA5F98190B8B0A009BFB12 /* UIView+MonnyExtension.m in Sources */,
+				96DA5F93190B8B0A009BFB12 /* NSDate+MonnyExtension.m in Sources */,
+				96DA5F78190B8A85009BFB12 /* CalendarViewController.m in Sources */,
+				96DA5F7B190B8A91009BFB12 /* AddEventViewController.m in Sources */,
+				96DA5F91190B8B0A009BFB12 /* UIViewController+MonnyExtension.m in Sources */,
+				96DA5F92190B8B0A009BFB12 /* UIColor+MonnyColor.m in Sources */,
+				96DA5F95190B8B0A009BFB12 /* UIImage+MonnyImage.m in Sources */,
+				96DA5F94190B8B0A009BFB12 /* UIFont+MonnyFont.m in Sources */,
+				96DA5F99190B8B0A009BFB12 /* GAI+MonnyExtension.m in Sources */,
+				96DA5F4F190B8917009BFB12 /* AppDelegate.m in Sources */,
+				96DA5F4B190B8917009BFB12 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96DA5F5B190B8917009BFB12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96DA5F6D190B8917009BFB12 /* CatlendarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96DA5F65190B8917009BFB12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96DA5F3A190B8917009BFB12 /* Catlendar */;
+			targetProxy = 96DA5F64190B8917009BFB12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96DA5F47190B8917009BFB12 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96DA5F48190B8917009BFB12 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96DA5F69190B8917009BFB12 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96DA5F6A190B8917009BFB12 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96DA5F6E190B8917009BFB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96DA5F6F190B8917009BFB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96DA5F71190B8917009BFB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A17430D543634CCFB638B395 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Catlendar/Catlendar-Prefix.pch";
+				INFOPLIST_FILE = "Catlendar/Catlendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96DA5F72190B8917009BFB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A17430D543634CCFB638B395 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Catlendar/Catlendar-Prefix.pch";
+				INFOPLIST_FILE = "Catlendar/Catlendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		96DA5F74190B8917009BFB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Catlendar.app/Catlendar";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Catlendar/Catlendar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CatlendarTests/CatlendarTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		96DA5F75190B8917009BFB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Catlendar.app/Catlendar";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Catlendar/Catlendar-Prefix.pch";
+				INFOPLIST_FILE = "CatlendarTests/CatlendarTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96DA5F36190B8917009BFB12 /* Build configuration list for PBXProject "Catlendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96DA5F6E190B8917009BFB12 /* Debug */,
+				96DA5F6F190B8917009BFB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96DA5F70190B8917009BFB12 /* Build configuration list for PBXNativeTarget "Catlendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96DA5F71190B8917009BFB12 /* Debug */,
+				96DA5F72190B8917009BFB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96DA5F73190B8917009BFB12 /* Build configuration list for PBXNativeTarget "CatlendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96DA5F74190B8917009BFB12 /* Debug */,
+				96DA5F75190B8917009BFB12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96DA5F33190B8917009BFB12 /* Project object */;
+}
