@@ -57,6 +57,9 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
   - libextobjc/UmbrellaHeader (0.4)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.2)
   - ReactiveCocoa (2.2.4):
     - ReactiveCocoa/Core
     - ReactiveCocoa/no-arc
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - GoogleAnalytics-iOS-SDK (~> 3)
   - HockeySDK (~> 3)
   - libextobjc (~> 0.4)
+  - MagicalRecord (~> 2)
   - ReactiveCocoa (~> 2)
   - RMStore (~> 0.4)
   - UIColor-Utilities (~> 1)
@@ -95,6 +99,7 @@ SPEC CHECKSUMS:
   GoogleAnalytics-iOS-SDK: 16dfcc0c4491148bf372edc85a8470cc405ffb72
   HockeySDK: 350ef1cf18d2fc9a13801ad077c307cece8c6c64
   libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
+  MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
   ReactiveCocoa: 953a45dda30674fe704d1d9c77cc874141742f47
   RMStore: 5f2b9b125b2d05670a5d11327d56bc6205ef0fd1
   UIColor-Utilities: 5c2076b975f423097011aeea4012e75857dd9c99
