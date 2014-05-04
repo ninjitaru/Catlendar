@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964EF66D191627930062FDFF /* AddEventTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF66C191627930062FDFF /* AddEventTableItem.m */; };
+		964EF6701916294E0062FDFF /* AddEventViewController+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF66F1916294E0062FDFF /* AddEventViewController+Data.m */; };
+		964EF67419162BC10062FDFF /* CLDateTimePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF67219162BC10062FDFF /* CLDateTimePickerTableViewCell.m */; };
+		964EF67519162BC10062FDFF /* CLDateTimePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964EF67319162BC10062FDFF /* CLDateTimePickerTableViewCell.xib */; };
+		964EF67919162BE10062FDFF /* CLTextInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF67719162BE10062FDFF /* CLTextInputTableViewCell.m */; };
+		964EF67A19162BE10062FDFF /* CLTextInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964EF67819162BE10062FDFF /* CLTextInputTableViewCell.xib */; };
+		964EF67E19162C200062FDFF /* CLOnOffTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF67C19162C200062FDFF /* CLOnOffTableViewCell.m */; };
+		964EF67F19162C200062FDFF /* CLOnOffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964EF67D19162C200062FDFF /* CLOnOffTableViewCell.xib */; };
+		964EF682191632D00062FDFF /* UITableViewCell+AddEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF681191632D00062FDFF /* UITableViewCell+AddEvent.m */; };
+		964EF6851916384D0062FDFF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 964EF6871916384D0062FDFF /* Localizable.strings */; };
 		96DA5F3F190B8917009BFB12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F3E190B8917009BFB12 /* Foundation.framework */; };
 		96DA5F41190B8917009BFB12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F40190B8917009BFB12 /* CoreGraphics.framework */; };
 		96DA5F43190B8917009BFB12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F42190B8917009BFB12 /* UIKit.framework */; };
@@ -43,6 +53,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		964EF66B191627930062FDFF /* AddEventTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventTableItem.h; sourceTree = "<group>"; };
+		964EF66C191627930062FDFF /* AddEventTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventTableItem.m; sourceTree = "<group>"; };
+		964EF66E1916294E0062FDFF /* AddEventViewController+Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AddEventViewController+Data.h"; sourceTree = "<group>"; };
+		964EF66F1916294E0062FDFF /* AddEventViewController+Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AddEventViewController+Data.m"; sourceTree = "<group>"; };
+		964EF67119162BC10062FDFF /* CLDateTimePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDateTimePickerTableViewCell.h; sourceTree = "<group>"; };
+		964EF67219162BC10062FDFF /* CLDateTimePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDateTimePickerTableViewCell.m; sourceTree = "<group>"; };
+		964EF67319162BC10062FDFF /* CLDateTimePickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLDateTimePickerTableViewCell.xib; sourceTree = "<group>"; };
+		964EF67619162BE10062FDFF /* CLTextInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextInputTableViewCell.h; sourceTree = "<group>"; };
+		964EF67719162BE10062FDFF /* CLTextInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextInputTableViewCell.m; sourceTree = "<group>"; };
+		964EF67819162BE10062FDFF /* CLTextInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLTextInputTableViewCell.xib; sourceTree = "<group>"; };
+		964EF67B19162C200062FDFF /* CLOnOffTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLOnOffTableViewCell.h; sourceTree = "<group>"; };
+		964EF67C19162C200062FDFF /* CLOnOffTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLOnOffTableViewCell.m; sourceTree = "<group>"; };
+		964EF67D19162C200062FDFF /* CLOnOffTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLOnOffTableViewCell.xib; sourceTree = "<group>"; };
+		964EF680191632D00062FDFF /* UITableViewCell+AddEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+AddEvent.h"; sourceTree = "<group>"; };
+		964EF681191632D00062FDFF /* UITableViewCell+AddEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AddEvent.m"; sourceTree = "<group>"; };
+		964EF6861916384D0062FDFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		964EF688191639050062FDFF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96DA5F3B190B8917009BFB12 /* Catlendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catlendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DA5F3E190B8917009BFB12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96DA5F40190B8917009BFB12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		964EF6671916276A0062FDFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				964EF66B191627930062FDFF /* AddEventTableItem.h */,
+				964EF66C191627930062FDFF /* AddEventTableItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		96DA5F32190B8917009BFB12 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +179,7 @@
 		96DA5F44190B8917009BFB12 /* Catlendar */ = {
 			isa = PBXGroup;
 			children = (
+				964EF6671916276A0062FDFF /* Model */,
 				96DA5F9B190B8B1C009BFB12 /* Controller */,
 				96DA5F7C190B8AA1009BFB12 /* Support */,
 				96DA5F4D190B8917009BFB12 /* AppDelegate.h */,
@@ -160,6 +197,7 @@
 				96DA5F47190B8917009BFB12 /* InfoPlist.strings */,
 				96DA5F4A190B8917009BFB12 /* main.m */,
 				96DA5F4C190B8917009BFB12 /* Catlendar-Prefix.pch */,
+				964EF6871916384D0062FDFF /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,6 +250,19 @@
 				96DA5F77190B8A85009BFB12 /* CalendarViewController.m */,
 				96DA5F79190B8A91009BFB12 /* AddEventViewController.h */,
 				96DA5F7A190B8A91009BFB12 /* AddEventViewController.m */,
+				964EF66E1916294E0062FDFF /* AddEventViewController+Data.h */,
+				964EF66F1916294E0062FDFF /* AddEventViewController+Data.m */,
+				964EF67119162BC10062FDFF /* CLDateTimePickerTableViewCell.h */,
+				964EF67219162BC10062FDFF /* CLDateTimePickerTableViewCell.m */,
+				964EF67319162BC10062FDFF /* CLDateTimePickerTableViewCell.xib */,
+				964EF67619162BE10062FDFF /* CLTextInputTableViewCell.h */,
+				964EF67719162BE10062FDFF /* CLTextInputTableViewCell.m */,
+				964EF67819162BE10062FDFF /* CLTextInputTableViewCell.xib */,
+				964EF67B19162C200062FDFF /* CLOnOffTableViewCell.h */,
+				964EF67C19162C200062FDFF /* CLOnOffTableViewCell.m */,
+				964EF67D19162C200062FDFF /* CLOnOffTableViewCell.xib */,
+				964EF680191632D00062FDFF /* UITableViewCell+AddEvent.h */,
+				964EF681191632D00062FDFF /* UITableViewCell+AddEvent.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -280,6 +331,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 96DA5F32190B8917009BFB12;
 			productRefGroup = 96DA5F3C190B8917009BFB12 /* Products */;
@@ -297,8 +349,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964EF67A19162BE10062FDFF /* CLTextInputTableViewCell.xib in Resources */,
+				964EF6851916384D0062FDFF /* Localizable.strings in Resources */,
+				964EF67519162BC10062FDFF /* CLDateTimePickerTableViewCell.xib in Resources */,
 				96DA5F5A190B8917009BFB12 /* Images.xcassets in Resources */,
 				96DA5F49190B8917009BFB12 /* InfoPlist.strings in Resources */,
+				964EF67F19162C200062FDFF /* CLOnOffTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,14 +408,20 @@
 			files = (
 				96DA5F9A190B8B0A009BFB12 /* SLComposeViewController+MonnyExtension.m in Sources */,
 				96DA5F98190B8B0A009BFB12 /* UIView+MonnyExtension.m in Sources */,
+				964EF67E19162C200062FDFF /* CLOnOffTableViewCell.m in Sources */,
 				96DA5F93190B8B0A009BFB12 /* NSDate+MonnyExtension.m in Sources */,
 				96DA5F78190B8A85009BFB12 /* CalendarViewController.m in Sources */,
 				96DA5F7B190B8A91009BFB12 /* AddEventViewController.m in Sources */,
 				96DA5F91190B8B0A009BFB12 /* UIViewController+MonnyExtension.m in Sources */,
+				964EF66D191627930062FDFF /* AddEventTableItem.m in Sources */,
+				964EF682191632D00062FDFF /* UITableViewCell+AddEvent.m in Sources */,
 				96DA5F92190B8B0A009BFB12 /* UIColor+MonnyColor.m in Sources */,
 				96DA5F95190B8B0A009BFB12 /* UIImage+MonnyImage.m in Sources */,
 				96DA5F94190B8B0A009BFB12 /* UIFont+MonnyFont.m in Sources */,
 				96DA5F99190B8B0A009BFB12 /* GAI+MonnyExtension.m in Sources */,
+				964EF6701916294E0062FDFF /* AddEventViewController+Data.m in Sources */,
+				964EF67919162BE10062FDFF /* CLTextInputTableViewCell.m in Sources */,
+				964EF67419162BC10062FDFF /* CLDateTimePickerTableViewCell.m in Sources */,
 				96DA5F4F190B8917009BFB12 /* AppDelegate.m in Sources */,
 				96DA5F4B190B8917009BFB12 /* main.m in Sources */,
 			);
@@ -384,6 +446,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		964EF6871916384D0062FDFF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				964EF6861916384D0062FDFF /* en */,
+				964EF688191639050062FDFF /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		96DA5F47190B8917009BFB12 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CalendarViewController.h"
+#import "AddEventViewController.h"
 
 @interface AppDelegate ()
 @property (nonatomic,strong) UIWindow *windows;
@@ -18,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [CalendarViewController new]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [AddEventViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }
