@@ -8,7 +8,7 @@
 
 #import "CLTextInputTableViewCell.h"
 
-@interface CLTextInputTableViewCell ()
+@interface CLTextInputTableViewCell () <UITextFieldDelegate>
 @property (nonatomic,strong) IBOutlet UITextField *textField;
 @property (nonatomic,strong) IBOutlet UITextView *textView;
 @end
@@ -41,7 +41,12 @@
 - (UITextField *) textField {
     if(!_textField) {
         _textField = [UITextField new];
-        _textField.frame = CGRectOffset(self.contentView.bounds, 20, 0);
+        CGRect frame = CGRectOffset(self.contentView.bounds, 20, 0);
+        frame.size.width = CGRectGetWidth(self.contentView.bounds)-20;
+        _textField.frame = frame;
+        _textField.returnKeyType = UIReturnKeyDone;
+        _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _textField.delegate = self;
     }
     return _textField;
 }
@@ -49,10 +54,22 @@
 - (UITextView *) textView {
     if(!_textView) {
         _textView = [UITextView new];
-        
-        _textView.frame = CGRectOffset(self.contentView.bounds, 20, 0);
+        CGRect frame = CGRectOffset(self.contentView.bounds, 20, 0);
+        frame.size.width = CGRectGetWidth(self.contentView.bounds)-20;
+        _textView.frame = frame;
     }
     return _textView;
+}
+
+#pragma mark - textfield delegate 
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSLog(@"%@",textField.text);
 }
 
 @end

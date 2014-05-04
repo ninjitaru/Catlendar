@@ -16,6 +16,7 @@ NSString *const cat_AddEventEndDate = @"enddate";
 NSString *const cat_AddEventTitle = @"title";
 NSString *const cat_AddEventSticker = @"sticker";
 NSString *const cat_AddEventNote = @"note";
+NSString *const cat_AddEventDatePicker = @"datepicker";
 
 @implementation AddEventViewController (Data)
 

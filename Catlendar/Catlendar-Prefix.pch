@@ -13,6 +13,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <MagicalRecord/CoreData+MagicalRecord.h>
 
     #define MN_ISIOS7 (NSFoundationVersionNumber > floor(NSFoundationVersionNumber_iOS_6_1))
 #endif

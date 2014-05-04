@@ -11,11 +11,12 @@
 extern NSString *const CLDateTimePickerTableViewCellIdentifier;
 extern NSString *const CLTextInputTableViewCellIdentifier;
 extern NSString *const CLOnOffTableViewCellIdentifier;
+extern NSString *const CLUIDatePickerTableViewCellIdentifier;
 
-@class AddEventTableItem;
+@class AddEventTableItem,CatlendarEvent;
 @interface UITableViewCell (AddEvent)
 
-- (void) configWithItem:(AddEventTableItem *)item;
-
+- (void) configWithItem:(AddEventTableItem *)item event:(CatlendarEvent *)event;
++ (void) handleCellSelectedWithTableView:(UITableView *)tableView selectRowAtIndexPath:(NSIndexPath *)indexPath event:(CatlendarEvent *) event;
 
 @end

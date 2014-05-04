@@ -31,7 +31,7 @@
         [array addObject: arg];
     }
     va_end(args);
-    sectionItem.items = [NSArray arrayWithArray: array];
+    sectionItem.items = array;
     return sectionItem;
 }
 

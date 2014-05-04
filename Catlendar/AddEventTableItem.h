@@ -11,15 +11,13 @@
 @interface AddEventTableItem : NSObject
 @property (nonatomic,strong) NSString *key;
 @property (nonatomic,strong) NSString *cellIdentifier;
-@property (nonatomic,strong) NSDate *date;
-@property (nonatomic,strong) NSString *text;
-@property (nonatomic,assign) BOOL on;
+@property (nonatomic,strong) NSString *parentKey;
 +(instancetype) itemWithKey:(NSString *)key identifier:(NSString *)identifier;
 @end
 
 @interface AddEventTableSectionItem : NSObject
 @property (nonatomic,strong) NSString *title;
-@property (nonatomic,strong) NSArray *items;
+@property (nonatomic,strong) NSMutableArray *items;
 +(instancetype) sectionItemWithTitle:(NSString *)title items:(AddEventTableItem *)item, ...;
 @end
 

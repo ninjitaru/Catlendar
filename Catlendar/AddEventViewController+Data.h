@@ -14,6 +14,7 @@ extern NSString *const cat_AddEventEndDate;
 extern NSString *const cat_AddEventTitle;
 extern NSString *const cat_AddEventSticker;
 extern NSString *const cat_AddEventNote;
+extern NSString *const cat_AddEventDatePicker;
 
 @interface AddEventViewController (Data)
 

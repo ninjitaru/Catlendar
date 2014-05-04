@@ -20,6 +20,7 @@ PODS:
     - AFNetworking/NSURLSession
   - CargoBay (2.0.3):
     - AFNetworking (~> 2.1)
+  - DSLCalendarView (0.0.1)
   - GoogleAnalytics-iOS-SDK (3.0.6)
   - HockeySDK (3.5.5)
   - libextobjc (0.4):
@@ -60,6 +61,10 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
+  - MNCalendarView (0.0.1)
+  - OCCalendar-Ext (0.1.7)
+  - PDTSimpleCalendar (0.7.0)
+  - RDVCalendarView (1.0.7)
   - ReactiveCocoa (2.2.4):
     - ReactiveCocoa/Core
     - ReactiveCocoa/no-arc
@@ -85,10 +90,15 @@ PODS:
 
 DEPENDENCIES:
   - CargoBay (~> 2)
+  - DSLCalendarView (~> 0.0.1)
   - GoogleAnalytics-iOS-SDK (~> 3)
   - HockeySDK (~> 3)
   - libextobjc (~> 0.4)
   - MagicalRecord (~> 2)
+  - MNCalendarView (~> 0.0.1)
+  - OCCalendar-Ext (~> 0.1)
+  - PDTSimpleCalendar (~> 0.7)
+  - RDVCalendarView (~> 1.0.7)
   - ReactiveCocoa (~> 2)
   - RMStore (~> 0.4)
   - UIColor-Utilities (~> 1)
@@ -96,10 +106,15 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: ae513199cca79e9d7af2708ccabe2ed075550c42
   CargoBay: 3a8ef0f0cc8667d37364412fb62216d06b353e7c
+  DSLCalendarView: 4baa34bb796a716df488f23c00b3eaeff459d1f4
   GoogleAnalytics-iOS-SDK: 16dfcc0c4491148bf372edc85a8470cc405ffb72
   HockeySDK: 350ef1cf18d2fc9a13801ad077c307cece8c6c64
   libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
   MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
+  MNCalendarView: 418d04817ff7130a4ad5ae7eeb945cedd91e91a9
+  OCCalendar-Ext: 37882875ffdfca2f6bb9d93c3159212cd9ca5ddd
+  PDTSimpleCalendar: 304595c002e3a52e0249efea0581d93310a0320b
+  RDVCalendarView: d91218b8953de04e7c91ee5ed05312682cafdf49
   ReactiveCocoa: 953a45dda30674fe704d1d9c77cc874141742f47
   RMStore: 5f2b9b125b2d05670a5d11327d56bc6205ef0fd1
   UIColor-Utilities: 5c2076b975f423097011aeea4012e75857dd9c99

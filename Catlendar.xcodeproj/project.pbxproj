@@ -17,6 +17,10 @@
 		964EF67F19162C200062FDFF /* CLOnOffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964EF67D19162C200062FDFF /* CLOnOffTableViewCell.xib */; };
 		964EF682191632D00062FDFF /* UITableViewCell+AddEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF681191632D00062FDFF /* UITableViewCell+AddEvent.m */; };
 		964EF6851916384D0062FDFF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 964EF6871916384D0062FDFF /* Localizable.strings */; };
+		964EF68C19164B3F0062FDFF /* CLUIDatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF68A19164B3F0062FDFF /* CLUIDatePickerTableViewCell.m */; };
+		964EF68D19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964EF68B19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib */; };
+		964EF69319164E9B0062FDFF /* Catlendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 964EF69119164E9B0062FDFF /* Catlendar.xcdatamodeld */; };
+		964EF69619164F320062FDFF /* CatlendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF69519164F320062FDFF /* CatlendarEvent.m */; };
 		96DA5F3F190B8917009BFB12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F3E190B8917009BFB12 /* Foundation.framework */; };
 		96DA5F41190B8917009BFB12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F40190B8917009BFB12 /* CoreGraphics.framework */; };
 		96DA5F43190B8917009BFB12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F42190B8917009BFB12 /* UIKit.framework */; };
@@ -70,6 +74,12 @@
 		964EF681191632D00062FDFF /* UITableViewCell+AddEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+AddEvent.m"; sourceTree = "<group>"; };
 		964EF6861916384D0062FDFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		964EF688191639050062FDFF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		964EF68919164B3F0062FDFF /* CLUIDatePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUIDatePickerTableViewCell.h; sourceTree = "<group>"; };
+		964EF68A19164B3F0062FDFF /* CLUIDatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUIDatePickerTableViewCell.m; sourceTree = "<group>"; };
+		964EF68B19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLUIDatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		964EF69219164E9B0062FDFF /* Catlendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catlendar.xcdatamodel; sourceTree = "<group>"; };
+		964EF69419164F320062FDFF /* CatlendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatlendarEvent.h; sourceTree = "<group>"; };
+		964EF69519164F320062FDFF /* CatlendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatlendarEvent.m; sourceTree = "<group>"; };
 		96DA5F3B190B8917009BFB12 /* Catlendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catlendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DA5F3E190B8917009BFB12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96DA5F40190B8917009BFB12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +150,8 @@
 			children = (
 				964EF66B191627930062FDFF /* AddEventTableItem.h */,
 				964EF66C191627930062FDFF /* AddEventTableItem.m */,
+				964EF69419164F320062FDFF /* CatlendarEvent.h */,
+				964EF69519164F320062FDFF /* CatlendarEvent.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 				96DA5F4E190B8917009BFB12 /* AppDelegate.m */,
 				96DA5F59190B8917009BFB12 /* Images.xcassets */,
 				96DA5F45190B8917009BFB12 /* Supporting Files */,
+				964EF69119164E9B0062FDFF /* Catlendar.xcdatamodeld */,
 			);
 			path = Catlendar;
 			sourceTree = "<group>";
@@ -263,6 +276,9 @@
 				964EF67D19162C200062FDFF /* CLOnOffTableViewCell.xib */,
 				964EF680191632D00062FDFF /* UITableViewCell+AddEvent.h */,
 				964EF681191632D00062FDFF /* UITableViewCell+AddEvent.m */,
+				964EF68919164B3F0062FDFF /* CLUIDatePickerTableViewCell.h */,
+				964EF68A19164B3F0062FDFF /* CLUIDatePickerTableViewCell.m */,
+				964EF68B19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				964EF67A19162BE10062FDFF /* CLTextInputTableViewCell.xib in Resources */,
+				964EF68D19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib in Resources */,
 				964EF6851916384D0062FDFF /* Localizable.strings in Resources */,
 				964EF67519162BC10062FDFF /* CLDateTimePickerTableViewCell.xib in Resources */,
 				96DA5F5A190B8917009BFB12 /* Images.xcassets in Resources */,
@@ -415,12 +432,15 @@
 				96DA5F91190B8B0A009BFB12 /* UIViewController+MonnyExtension.m in Sources */,
 				964EF66D191627930062FDFF /* AddEventTableItem.m in Sources */,
 				964EF682191632D00062FDFF /* UITableViewCell+AddEvent.m in Sources */,
+				964EF69619164F320062FDFF /* CatlendarEvent.m in Sources */,
 				96DA5F92190B8B0A009BFB12 /* UIColor+MonnyColor.m in Sources */,
 				96DA5F95190B8B0A009BFB12 /* UIImage+MonnyImage.m in Sources */,
+				964EF68C19164B3F0062FDFF /* CLUIDatePickerTableViewCell.m in Sources */,
 				96DA5F94190B8B0A009BFB12 /* UIFont+MonnyFont.m in Sources */,
 				96DA5F99190B8B0A009BFB12 /* GAI+MonnyExtension.m in Sources */,
 				964EF6701916294E0062FDFF /* AddEventViewController+Data.m in Sources */,
 				964EF67919162BE10062FDFF /* CLTextInputTableViewCell.m in Sources */,
+				964EF69319164E9B0062FDFF /* Catlendar.xcdatamodeld in Sources */,
 				964EF67419162BC10062FDFF /* CLDateTimePickerTableViewCell.m in Sources */,
 				96DA5F4F190B8917009BFB12 /* AppDelegate.m in Sources */,
 				96DA5F4B190B8917009BFB12 /* main.m in Sources */,
@@ -649,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		964EF69119164E9B0062FDFF /* Catlendar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				964EF69219164E9B0062FDFF /* Catlendar.xcdatamodel */,
+			);
+			currentVersion = 964EF69219164E9B0062FDFF /* Catlendar.xcdatamodel */;
+			path = Catlendar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 96DA5F33190B8917009BFB12 /* Project object */;
 }

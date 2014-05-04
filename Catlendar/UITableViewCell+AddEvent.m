@@ -12,47 +12,97 @@
 #import "CLDateTimePickerTableViewCell.h"
 #import "CLOnOffTableViewCell.h"
 #import "CLTextInputTableViewCell.h"
+#import "CLUIDatePickerTableViewCell.h"
 #import "NSDate+MonnyExtension.h"
+#import "CatlendarEvent.h"
 
 NSString *const CLDateTimePickerTableViewCellIdentifier = @"datetimepickercell";
 NSString *const CLTextInputTableViewCellIdentifier = @"textinputcell";
 NSString *const CLOnOffTableViewCellIdentifier = @"onoffcell";
+NSString *const CLUIDatePickerTableViewCellIdentifier = @"uidatepickercell";
 
 @implementation UITableViewCell (AddEvent)
 
-- (void) configWithItem:(AddEventTableItem *)item {
+- (void) configWithItem:(AddEventTableItem *)item event:(CatlendarEvent *)event {
     NSDictionary *handlersByKey = @{
-                                    cat_AddEventAllDay:[^(CLOnOffTableViewCell *cell,AddEventTableItem *item) {
-                                        cell.titleLabel.text = NSLocalizedString(item.key, nil);
-                                        cell.onOffSwitch.on = item.on;
-                                    } copy],
-                                    cat_AddEventStartDate:[^(CLDateTimePickerTableViewCell *cell,AddEventTableItem *item) {
-                                        if(!item.date) {
-                                            NSCalendar *calendar = [NSDate mn_calendar];
-                                            NSDateComponents *component = [calendar components:(NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute) fromDate: [NSDate date]];
-                                            if(component.minute > 0) {
-                                                component.hour += 1;
-                                                component.minute = 0;
-                                            }
-                                            item.date = [calendar dateFromComponents: component];
+                                    cat_AddEventDatePicker:[^(CLUIDatePickerTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
+                                        if([item.parentKey isEqualToString: cat_AddEventStartDate]) {
+                                            [cell configWithDate: event.startDate];
+                                        } else {
+                                            [cell configWithDate: event.endDate];
                                         }
-                                        [cell configWithTitle: NSLocalizedString(item.key, nil) date: item.date];
                                     } copy],
-                                    cat_AddEventEndDate:[^(CLDateTimePickerTableViewCell *cell,AddEventTableItem *item) {
-                                        [cell configWithTitle: NSLocalizedString(item.key, nil) date: item.date];
+                                    cat_AddEventAllDay:[^(CLOnOffTableViewCell *cell,AddEventTableItem *item,CatlendarEvent *event) {
+                                        cell.titleLabel.text = NSLocalizedString(item.key, nil);
+                                        cell.onOffSwitch.on = event.isAllDay;
                                     } copy],
-                                    cat_AddEventTitle:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item) {
-                                        [cell configWithText: item.text placeholder:NSLocalizedString(item.key, nil) asTextView:NO];
+                                    cat_AddEventStartDate:[^(CLDateTimePickerTableViewCell *cell,AddEventTableItem *item,CatlendarEvent *event) {
+                                        [cell configWithTitle: NSLocalizedString(item.key, nil) date: event.startDate];
                                     } copy],
-                                    cat_AddEventSticker:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item) {
-                                        [cell configWithText: item.text placeholder:NSLocalizedString(item.key, nil) asTextView:NO];
+                                    cat_AddEventEndDate:[^(CLDateTimePickerTableViewCell *cell,AddEventTableItem *item,CatlendarEvent *event) {
+                                        [cell configWithTitle: NSLocalizedString(item.key, nil) date: event.endDate];
                                     } copy],
-                                    cat_AddEventNote:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item) {
-                                        [cell configWithText: item.text placeholder:NSLocalizedString(item.key, nil) asTextView:YES];
+                                    cat_AddEventTitle:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
+                                        [cell configWithText: event.title placeholder:NSLocalizedString(item.key, nil) asTextView:NO];
+                                    } copy],
+                                    cat_AddEventSticker:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
+                                        [cell configWithText: nil placeholder:NSLocalizedString(item.key, nil) asTextView:NO];
+                                    } copy],
+                                    cat_AddEventNote:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
+                                        [cell configWithText: event.note placeholder:NSLocalizedString(item.key, nil) asTextView:YES];
                                     } copy],
                               };
-    void(^handler)(UITableViewCell * cell,AddEventTableItem *item) = handlersByKey[item.key];
-    handler(self,item);
+    void(^handler)(UITableViewCell * cell,AddEventTableItem *item,CatlendarEvent *event) = handlersByKey[item.key];
+    if(handler) {
+        handler(self,item,event);
+    }
+}
+
++ (void) handleCellSelectedWithTableView:(UITableView *)tableView selectRowAtIndexPath:(NSIndexPath *)indexPath event:(CatlendarEvent *) event {
+    AddEventTableSectionItem *section = (AddEventTableSectionItem *)[AddEventViewController addEventTableSectionData][indexPath.section];
+    AddEventTableItem *item = ((AddEventTableSectionItem *)[AddEventViewController addEventTableSectionData][indexPath.section]).items[indexPath.row];
+    NSDictionary *handlersByKey = @{
+                                    cat_AddEventStartDate:[^(UITableView *tableView,NSIndexPath *indexPath,AddEventTableItem *item,CatlendarEvent *event) {
+                                        
+                                        [UITableViewCell toggleUIDatePickerCellWithTableView:tableView selectedRowAtIndexPath: indexPath section: section item: item event: event];
+                                    } copy],
+                                    cat_AddEventEndDate:[^(UITableView *tableView,NSIndexPath *indexPath,AddEventTableItem *item,CatlendarEvent *event) {
+                                        [UITableViewCell toggleUIDatePickerCellWithTableView:tableView selectedRowAtIndexPath: indexPath section: section item: item event: event];
+                                    } copy],
+                                    cat_AddEventSticker:[^(UITableView *tableView,NSIndexPath *indexPath,AddEventTableItem *item,CatlendarEvent *event) {
+                                    } copy],
+                                    };
+    void(^handler)(UITableView *,NSIndexPath *,AddEventTableItem *,CatlendarEvent *) = handlersByKey[item.key];
+    if(handler) {
+        handler(tableView,indexPath,item,event);
+    }
+}
+
++ (void) toggleUIDatePickerCellWithTableView:(UITableView *)tableView selectedRowAtIndexPath:(NSIndexPath *)indexPath section:(AddEventTableSectionItem *) section item:(AddEventTableItem *)item event:(CatlendarEvent *)event {
+    
+    BOOL addDatePickerRow = YES;
+    if(section.items.count >= indexPath.row+2) {
+        AddEventTableItem *nextItem = section.items[indexPath.row+1];
+        if([nextItem.parentKey isEqualToString: item.key]) {
+            addDatePickerRow = NO;
+        }
+    }
+    
+    if(addDatePickerRow) {
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow: indexPath.row+1 inSection:indexPath.section];
+        AddEventTableItem *newItem = [AddEventTableItem itemWithKey: cat_AddEventDatePicker identifier:CLUIDatePickerTableViewCellIdentifier];
+        newItem.parentKey = item.key;
+        [section.items insertObject: newItem atIndex: newIndexPath.row];
+        [tableView beginUpdates];
+        [tableView insertRowsAtIndexPaths: @[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+    } else {
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow: indexPath.row+1 inSection:indexPath.section];
+        [section.items removeObjectAtIndex: newIndexPath.row];
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths: @[newIndexPath] withRowAnimation:UITableViewRowAnimationTop];
+        [tableView endUpdates];
+    }
 }
 
 @end
