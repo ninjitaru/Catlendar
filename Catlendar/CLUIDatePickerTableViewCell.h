@@ -11,13 +11,13 @@
 @class CLUIDatePickerTableViewCell;
 @protocol CLUIDatePickerTableViewCellDelegate <NSObject>
 
-- (void) datePickerCell:(CLUIDatePickerTableViewCell *)cell datePickerValueChanged:(UIDatePicker *)datePicker;
+- (void) datePickerCell:(CLUIDatePickerTableViewCell *)cell withItemKey:(NSString *)key  datePickerValueChanged:(UIDatePicker *)datePicker;
 
 @end
 
 @interface CLUIDatePickerTableViewCell : UITableViewCell
 
 @property (nonatomic,weak) id<CLUIDatePickerTableViewCellDelegate> delegate;
-- (void) configWithDate:(NSDate *)date;
+- (void) configWithDate:(NSDate *)date itemKey:(NSString *)key;
 
 @end

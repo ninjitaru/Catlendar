@@ -16,7 +16,7 @@ extern NSString *const CLUIDatePickerTableViewCellIdentifier;
 @class AddEventTableItem,CatlendarEvent;
 @interface UITableViewCell (AddEvent)
 
-- (void) configWithItem:(AddEventTableItem *)item event:(CatlendarEvent *)event;
+- (void) configWithItem:(AddEventTableItem *)item event:(CatlendarEvent *)event delegate:(id)delegate;
 + (void) handleCellSelectedWithTableView:(UITableView *)tableView selectRowAtIndexPath:(NSIndexPath *)indexPath event:(CatlendarEvent *) event;
 
 @end

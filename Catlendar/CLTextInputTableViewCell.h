@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLTextInputTableViewCell : UITableViewCell
+@class CLTextInputTableViewCell;
+@protocol CLTextInputTableViewCellDelegate <NSObject>
 
-- (void) configWithText:(NSString *)text placeholder:(NSString *)placeholder asTextView:(BOOL)useTextView;
+- (void) textInputCell:(CLTextInputTableViewCell *)cell withItemKey:(NSString *)key textValueChanged:(NSString *)text;
+
+@end
+
+@interface CLTextInputTableViewCell : UITableViewCell
+@property (nonatomic,weak) id<CLTextInputTableViewCellDelegate> delegate;
+- (void) configWithText:(NSString *)text placeholder:(NSString *)placeholder itemKey:(NSString *)itemKey asTextView:(BOOL)useTextView;
 
 @end

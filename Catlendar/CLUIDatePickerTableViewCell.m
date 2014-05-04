@@ -11,12 +11,13 @@
 
 @interface CLUIDatePickerTableViewCell ()
 @property (nonatomic,strong) IBOutlet UIDatePicker *datePicker;
+@property (nonatomic,strong) NSString *itemKey;
 @end
 
 @implementation CLUIDatePickerTableViewCell
 
-- (void) configWithDate:(NSDate *)date {
-    
+- (void) configWithDate:(NSDate *)date itemKey:(NSString *)key {
+    self.itemKey = key;
     [self.datePicker setDate: date animated: YES];
 }
 
@@ -35,8 +36,8 @@
 }
 
 - (void) dateValueChanged:(UIDatePicker *)datePicker {
-    if([self.delegate respondsToSelector:@selector(datePickerCell:datePickerValueChanged:)]){
-        [self.delegate datePickerCell: self datePickerValueChanged: datePicker];
+    if([self.delegate respondsToSelector:@selector(datePickerCell:withItemKey:datePickerValueChanged:)]){
+        [self.delegate datePickerCell: self withItemKey: self.itemKey datePickerValueChanged:datePicker];
     }
 }
 

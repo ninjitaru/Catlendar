@@ -23,16 +23,22 @@ NSString *const CLUIDatePickerTableViewCellIdentifier = @"uidatepickercell";
 
 @implementation UITableViewCell (AddEvent)
 
-- (void) configWithItem:(AddEventTableItem *)item event:(CatlendarEvent *)event {
+- (void) configWithItem:(AddEventTableItem *)item event:(CatlendarEvent *)event delegate:(id)delegate {
     NSDictionary *handlersByKey = @{
                                     cat_AddEventDatePicker:[^(CLUIDatePickerTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
+                                        if([delegate conformsToProtocol:@protocol(CLUIDatePickerTableViewCellDelegate)]) {
+                                            cell.delegate = delegate;
+                                        }
                                         if([item.parentKey isEqualToString: cat_AddEventStartDate]) {
-                                            [cell configWithDate: event.startDate];
+                                            [cell configWithDate: event.startDate itemKey: item.parentKey];
                                         } else {
-                                            [cell configWithDate: event.endDate];
+                                            [cell configWithDate: event.endDate itemKey: item.parentKey];
                                         }
                                     } copy],
                                     cat_AddEventAllDay:[^(CLOnOffTableViewCell *cell,AddEventTableItem *item,CatlendarEvent *event) {
+                                        if([delegate conformsToProtocol:@protocol(CLOnOffTableViewCellDelegate)]) {
+                                            cell.delegate = delegate;
+                                        }
                                         cell.titleLabel.text = NSLocalizedString(item.key, nil);
                                         cell.onOffSwitch.on = event.isAllDay;
                                     } copy],
@@ -43,13 +49,19 @@ NSString *const CLUIDatePickerTableViewCellIdentifier = @"uidatepickercell";
                                         [cell configWithTitle: NSLocalizedString(item.key, nil) date: event.endDate];
                                     } copy],
                                     cat_AddEventTitle:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
-                                        [cell configWithText: event.title placeholder:NSLocalizedString(item.key, nil) asTextView:NO];
+                                        if([delegate conformsToProtocol:@protocol(CLTextInputTableViewCellDelegate)]) {
+                                            cell.delegate = delegate;
+                                        }
+                                        [cell configWithText: event.title placeholder:NSLocalizedString(item.key, nil) itemKey: item.key asTextView:NO];
                                     } copy],
                                     cat_AddEventSticker:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
-                                        [cell configWithText: nil placeholder:NSLocalizedString(item.key, nil) asTextView:NO];
+                                        [cell configWithText: nil placeholder:NSLocalizedString(item.key, nil)  itemKey: item.key asTextView:NO];
                                     } copy],
                                     cat_AddEventNote:[^(CLTextInputTableViewCell *cell, AddEventTableItem *item,CatlendarEvent *event) {
-                                        [cell configWithText: event.note placeholder:NSLocalizedString(item.key, nil) asTextView:YES];
+                                        if([delegate conformsToProtocol:@protocol(CLTextInputTableViewCellDelegate)]) {
+                                            cell.delegate = delegate;
+                                        }
+                                        [cell configWithText: event.note placeholder:NSLocalizedString(item.key, nil)  itemKey: item.key asTextView:YES];
                                     } copy],
                               };
     void(^handler)(UITableViewCell * cell,AddEventTableItem *item,CatlendarEvent *event) = handlersByKey[item.key];

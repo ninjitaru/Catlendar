@@ -11,10 +11,14 @@
 #import "AddEventTableItem.h"
 #import "UITableViewCell+AddEvent.h"
 #import "CatlendarEvent.h"
+#import "CLOnOffTableViewCell.h"
+#import "CLTextInputTableViewCell.h"
+#import "CLUIDatePickerTableViewCell.h"
 
-@interface AddEventViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface AddEventViewController () <UITableViewDataSource,UITableViewDelegate,CLOnOffTableViewCellDelegate,CLTextInputTableViewCellDelegate,CLUIDatePickerTableViewCellDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
+#warning TODO do not mofidy this directly
 @property (nonatomic,strong) CatlendarEvent *event;
 
 @end
@@ -40,6 +44,7 @@
 
 - (void) cancel {
     if(_event) {
+        [_event hasChanges];
         [_event MR_deleteEntity];
     }
     [self.navigationController popViewControllerAnimated: YES];
@@ -50,7 +55,7 @@
     if([item.key isEqualToString: cat_AddEventNote]) {
         return 132;
     } else if([item.key isEqualToString: cat_AddEventDatePicker]) {
-        return 163;
+        return 217;
     }
     return 44;
 }
@@ -67,7 +72,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AddEventTableItem *item = ((AddEventTableSectionItem *)[AddEventViewController addEventTableSectionData][indexPath.section]).items[indexPath.row];
     UITableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier: item.cellIdentifier forIndexPath: indexPath];
-    [tableViewCell configWithItem: item event: self.event];
+    [tableViewCell configWithItem: item event: self.event delegate:self];
     return tableViewCell;
 }
 
@@ -116,6 +121,33 @@
         edgeInsets.bottom = 0;
         [[self tableView] setScrollIndicatorInsets:edgeInsets];
     }];
+}
+
+#pragma mark - delegate
+
+- (void) onOffCell:(CLOnOffTableViewCell *)cell onOffValueChanged:(UISwitch *) onOffSwitch {
+    self.event.isAllDay = @(onOffSwitch.on);
+}
+
+- (void) textInputCell:(CLTextInputTableViewCell *)cell withItemKey:(NSString *)key textValueChanged:(NSString *)text {
+    if([key isEqualToString: cat_AddEventTitle]) {
+        self.event.title = text;
+    } else if([key isEqualToString: cat_AddEventNote]) {
+        self.event.note = text;
+    }
+}
+
+- (void) datePickerCell:(CLUIDatePickerTableViewCell *)cell withItemKey:(NSString *)key datePickerValueChanged:(UIDatePicker *)datePicker {
+    if([key isEqualToString: cat_AddEventStartDate]) {
+        self.event.startDate = datePicker.date;
+    } else if([key isEqualToString: cat_AddEventEndDate]) {
+        self.event.endDate = datePicker.date;
+    }
+    [self.tableView beginUpdates];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell: cell];
+    NSIndexPath *parentIndexPath = [NSIndexPath indexPathForRow: indexPath.row-1 inSection: indexPath.section];
+    [self.tableView reloadRowsAtIndexPaths:@[parentIndexPath] withRowAnimation: UITableViewRowAnimationNone];
+    [self.tableView endUpdates];
 }
 
 - (CatlendarEvent *) event {

@@ -11,11 +11,13 @@
 @interface CLTextInputTableViewCell () <UITextFieldDelegate>
 @property (nonatomic,strong) IBOutlet UITextField *textField;
 @property (nonatomic,strong) IBOutlet UITextView *textView;
+@property (nonatomic,strong) NSString *itemKey;
 @end
 
 @implementation CLTextInputTableViewCell
 
-- (void) configWithText:(NSString *)text placeholder:(NSString *)placeholder asTextView:(BOOL)useTextView {
+- (void) configWithText:(NSString *)text placeholder:(NSString *)placeholder itemKey:(NSString *)itemKey asTextView:(BOOL)useTextView {
+    self.itemKey = itemKey;
     if(useTextView) {
         [self.contentView addSubview: self.textView];
         self.textView.text = text;
@@ -69,7 +71,9 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    NSLog(@"%@",textField.text);
+    if([self.delegate respondsToSelector:@selector(textInputCell:withItemKey:textValueChanged:)]) {
+        [self.delegate textInputCell: self withItemKey: self.itemKey textValueChanged:textField.text];
+    }
 }
 
 @end
