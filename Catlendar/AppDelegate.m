@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed: @"Catlendar.sql"];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [AddEventViewController new]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [CalendarViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }

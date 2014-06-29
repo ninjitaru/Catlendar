@@ -21,6 +21,7 @@
 		964EF68D19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964EF68B19164B3F0062FDFF /* CLUIDatePickerTableViewCell.xib */; };
 		964EF69319164E9B0062FDFF /* Catlendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 964EF69119164E9B0062FDFF /* Catlendar.xcdatamodeld */; };
 		964EF69619164F320062FDFF /* CatlendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EF69519164F320062FDFF /* CatlendarEvent.m */; };
+		96B1C942196060320093B7FD /* CatDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B1C941196060320093B7FD /* CatDayCellView.m */; };
 		96DA5F3F190B8917009BFB12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F3E190B8917009BFB12 /* Foundation.framework */; };
 		96DA5F41190B8917009BFB12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F40190B8917009BFB12 /* CoreGraphics.framework */; };
 		96DA5F43190B8917009BFB12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA5F42190B8917009BFB12 /* UIKit.framework */; };
@@ -80,6 +81,8 @@
 		964EF69219164E9B0062FDFF /* Catlendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catlendar.xcdatamodel; sourceTree = "<group>"; };
 		964EF69419164F320062FDFF /* CatlendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatlendarEvent.h; sourceTree = "<group>"; };
 		964EF69519164F320062FDFF /* CatlendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatlendarEvent.m; sourceTree = "<group>"; };
+		96B1C940196060320093B7FD /* CatDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatDayCellView.h; sourceTree = "<group>"; };
+		96B1C941196060320093B7FD /* CatDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatDayCellView.m; sourceTree = "<group>"; };
 		96DA5F3B190B8917009BFB12 /* Catlendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catlendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DA5F3E190B8917009BFB12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96DA5F40190B8917009BFB12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +159,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		96B1C93F196060170093B7FD /* DayCell */ = {
+			isa = PBXGroup;
+			children = (
+				96B1C940196060320093B7FD /* CatDayCellView.h */,
+				96B1C941196060320093B7FD /* CatDayCellView.m */,
+			);
+			name = DayCell;
+			sourceTree = "<group>";
+		};
 		96DA5F32190B8917009BFB12 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 		96DA5F44190B8917009BFB12 /* Catlendar */ = {
 			isa = PBXGroup;
 			children = (
+				96B1C93F196060170093B7FD /* DayCell */,
 				964EF6671916276A0062FDFF /* Model */,
 				96DA5F9B190B8B1C009BFB12 /* Controller */,
 				96DA5F7C190B8AA1009BFB12 /* Support */,
@@ -441,6 +454,7 @@
 				964EF6701916294E0062FDFF /* AddEventViewController+Data.m in Sources */,
 				964EF67919162BE10062FDFF /* CLTextInputTableViewCell.m in Sources */,
 				964EF69319164E9B0062FDFF /* Catlendar.xcdatamodeld in Sources */,
+				96B1C942196060320093B7FD /* CatDayCellView.m in Sources */,
 				964EF67419162BC10062FDFF /* CLDateTimePickerTableViewCell.m in Sources */,
 				96DA5F4F190B8917009BFB12 /* AppDelegate.m in Sources */,
 				96DA5F4B190B8917009BFB12 /* main.m in Sources */,

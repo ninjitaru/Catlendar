@@ -7,9 +7,11 @@
 //
 
 #import "CalendarViewController.h"
+#import "CatDayCellView.h"
 
 @interface CalendarViewController ()
 
+@property (nonatomic, strong) CatDayCellView *stuff;
 @end
 
 @implementation CalendarViewController
@@ -29,6 +31,10 @@
     if([self respondsToSelector: @selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
         self.automaticallyAdjustsScrollViewInsets = YES;
     }
+    
+    self.stuff = [[CatDayCellView alloc] initWithFrame: (CGRect){50,200,60,60}];
+    [self.view addSubview: self.stuff];
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -38,6 +44,13 @@
         frame.size.height = 120;
         self.navigationController.navigationBar.frame = frame;
     }];
+    
+    self.stuff.hour = 12;
+    self.stuff.hour = 13;
+    self.stuff.hour = 19;
+    self.stuff.hour = 20;
+    self.stuff.hour = 21;
+    self.stuff.hour = 22;
 }
 
 @end
